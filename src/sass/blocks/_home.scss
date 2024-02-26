@@ -115,7 +115,7 @@
    // .case-brig-fb__video
 
    &__video {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 22px;
       margin-bottom: 105px;
@@ -769,6 +769,7 @@
       display: grid;
       grid-template-columns: minmax(400px, 1fr) minmax(auto, 995px);
       justify-content: space-between;
+      align-items: start;
       gap: 60px;
 
       &:not(:last-child) {
@@ -871,7 +872,8 @@
    &__slider-chunk {
       position: relative;
       min-width: 0;
-      padding: 0 rem(80) 0 rem(30);
+      padding: 0 rem(80) 0 rem(50);
+      margin-bottom: rem(30);
    }
 
    // .case-brig-info__slider
@@ -1024,7 +1026,7 @@
 
       .btn-form__box {
          position: static;
-         padding-bottom: 41px;
+         padding-bottom: 60px;
       }
 
       .label-file {
@@ -1037,6 +1039,10 @@
             bottom: 0;
             left: 0;
          }
+      }
+
+      .placeholder {
+         width: auto;
       }
    }
 }
@@ -1214,6 +1220,111 @@
       @media (max-width:$sm) {
          font-size: 15px;
          line-height: 67%;
+      }
+   }
+}
+
+.arrow-korz {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      // top: 68%;
+      bottom: 23%;
+      right: -30px;
+      background: url(../img/korz.svg)center/contain no-repeat;
+      @include adaptiveValue("width", 89, 60, 2, 1920, 1199.98);
+      @include adaptiveValue("height", 69, 50, 2, 1920, 1199.98);
+
+      @include adaptiveValue("width", 80, 70, 3, 1199.98, 849.98);
+      @include adaptiveValue("height", 55, 50, 3, 1199.98, 849.98);
+
+      @media (max-width:em(849.98)) {
+         width: 55px;
+         height: 60px;
+      }
+
+      @media (max-width:em(647.98)) {
+         display: none;
+      }
+   }
+}
+
+.arrow-rec {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: -6%;
+      left: 63%;
+      @include adaptiveValue("width", 103, 56, 2, 1920, 1199.98);
+      @include adaptiveValue("height", 253, 120, 2, 1920, 1199.98);
+
+      @include adaptiveValue("width", 95, 80, 3, 1199.98, 849.98);
+      @include adaptiveValue("height", 230, 175, 3, 1199.98, 849.98);
+      background: url(../img/rec.svg)center/contain no-repeat;
+
+      @media (max-width:em(849.98)) {
+         width: 56px;
+         height: 130px;
+      }
+
+      @media (max-width:em(647.98)) {
+         display: none;
+      }
+
+   }
+}
+
+.arrow-povt {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: -7%;
+      left: 23.5%;
+      @include adaptiveValue("width", 92, 45, 2, 1920, 1199.98);
+      @include adaptiveValue("height", 101, 50, 2, 1920, 1199.98);
+
+      @include adaptiveValue("width", 92, 45, 3, 1199.98, 849.98);
+      @include adaptiveValue("height", 101, 50, 3, 1199.98, 849.98);
+      background: url(../img/povt.svg)center/contain no-repeat;
+
+      @media (max-width:em(849.98)) {
+         width: 55px;
+         height: 60px;
+      }
+
+      @media (max-width:em(647.98)) {
+         display: none;
+      }
+   }
+}
+
+.arrow-lk {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: -6%;
+      left: 34.5%;
+      @include adaptiveValue("width", 96, 56, 2, 1920, 1199.98);
+      @include adaptiveValue("height", 281, 130, 2, 1920, 1199.98);
+      @include adaptiveValue("width", 91, 65, 3, 1199.98, 849.98);
+      @include adaptiveValue("height", 260, 185, 3, 1199.98, 849.98);
+      background: url(../img/lk.svg)center/contain no-repeat;
+
+      @media (max-width:em(849.98)) {
+         width: 56px;
+         height: 145px;
+      }
+
+      @media (max-width:em(647.98)) {
+         display: none;
       }
    }
 }
