@@ -5062,13 +5062,13 @@ a {
   left: 0;
 }
 .case-brig-info__slider .swiper-button-prev::before {
-  background: url(../../img/slider-arr-left.svg);
+  background: url(../img/slider-arr-left.svg);
 }
 .case-brig-info__slider .swiper-button-next {
   right: 0px;
 }
 .case-brig-info__slider .swiper-button-next::before {
-  background: url(../../img/slider-arr-right.svg);
+  background: url(../img/slider-arr-right.svg);
 }
 .case-brig-info__card-image {
   cursor: pointer;
